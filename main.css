@@ -29,8 +29,13 @@ nav img {
     cursor: pointer;
     user-select: none;
     box-shadow: 5px 5px 10px rgba(53, 53, 53, 0.459);
+    transition: transform 0.18s ease-in-out; 
 }
 
+nav img:hover {
+    transform: scale(1.1); 
+    
+}
 nav h1 {
     font-size: 4vw;
     font-weight: 800;
@@ -174,3 +179,5 @@ hr {
     font-size: 5vw;
     text-shadow: 0 0 100px #00ff407e;
     }
+    
+    
