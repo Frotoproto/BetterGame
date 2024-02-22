@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter password to get access</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #2d4257;
+    }
+    h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #fffdfd;
+      
+    }
+    h2 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 0.99rem;
+      text-align: center;
+      margin-bottom: .5rem;
+      color: #fffdfd;
+      
+    }
+    .password-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: transparent;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .password-container input[type="password"] {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.5rem;
+      font-style:  #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      border-color: #646464;
+      margin-bottom: 1rem;
+      outline: none;
+      transition: all 0.3s ease-in-out;
+      background: transparent;
+    }
+    .password-container input[type="password"]:focus {
+      box-shadow: none;
+    }
+    .password-container button {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      border: none;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    .password-container button:hover {
+      background-color: #3e8e41;
+    }
+    .password-container button:focus {
+      outline: none;
+    }
+    .password-container button:active {
+      transform: translateY(2px);
+    }
+    .password-container button.wrong {
+      background-color: #f44336;
+      animation: shake 0.5s ease-in-out;
+    }
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      10% { transform: translateX(-10px); }
+      20% { transform: translateX(10px); }
+      30% { transform: translateX(-10px); }
+      40% { transform: translateX(10px); }
+      50% { transform: translateX(-10px); }
+      60% { transform: translateX(10px); }
+      70% { transform: translateX(-10px); }
+      80% { transform: translateX(10px); }
+      90% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+  <script>
+	window.oncontextmenu = function() {
+	  return false;
+	}
+  </script>  
+</head>
+<body>
+  <div class="password-container">
+    <h1>Enter password to get access</h1>
+    <h2>To access this page quickly, set this page as a bookmark</h2>
+    <input type="password" id="password" placeholder="Password" />
+    <button id="submit" onclick="checkPassword()">Go!</button>
+  </div>
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      if (password === "Hello_-World") {
+        window.location.href = "Minecraft.html";
+      } else {
+        var button = document.getElementById("submit");
+        button.classList.add("wrong");
+        setTimeout(function() {
+          button.classList.remove("wrong");
+        }, 500);
+      }
+    }
+  </script>
+</body>
+</html>
