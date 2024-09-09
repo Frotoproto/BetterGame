@@ -113,7 +113,7 @@ hr {
 
 #games img {    height: 15.6vw;
     width: 15.6vw;
-    border-radius: 1vw;
+    border-radius: 3vw;
     margin: .5vw;
     cursor: pointer;
     user-select: none;
@@ -154,7 +154,7 @@ hr {
 .featured img {
     height: 12.5vw;
     width: 12.5vw;
-    border-radius: 1vw;
+    border-radius: 3vw;
     margin: .5vw;
     cursor: pointer;
     user-select: none;
