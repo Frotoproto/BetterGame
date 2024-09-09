@@ -125,9 +125,6 @@ hr {
  
 #games img:hover {
     transform: scale(1.01);
-    border: 2px solid #ffffff; 
-    box-shadow: 0 0 15px #ffffff;
-    animation: borderGlow 0.5s forwards;
 }
 
 .featured {
@@ -167,9 +164,7 @@ hr {
 .featured img:hover {
     transform: scale(1.02);
     filter: brightness(50%);
-    border: 2px solid #32dd00; 
-    box-shadow: 0 0 15px #32dd00;
-    animation: borderGlow 0.5s forwards;
+    filter: blur(5px);
 }
 
 
