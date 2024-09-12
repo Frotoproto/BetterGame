@@ -5,6 +5,22 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+.cursor {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ffffff;;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    box-shadow: 0 0 15px #ffffff;
+    background: #ffffff;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(100px);
+  }
+
 nav {
     position: fixed;
     top: 0;
