@@ -11,3 +11,8 @@ input.addEventListener('input', () => {
     }
   });
 });
+
+ const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e => {
+        cursor.setAttribute("style", "top: " + (e.pageY - 100) + "px; left: " + (e.pageX - 100) + "px;");
+    });
